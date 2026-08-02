@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMASH ME — Smashburgers Zaandam</title>
+<meta name="description" content="SMASH ME — Legendary smashburgers in Zaandam. 100% vers gesmashed, elke dag opnieuw. Bestel online of kom langs op Czarinastraat 9.">
+<link rel="icon" type="image/png" href="assets/logo-badge-256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NOISE / TEXTURE OVERLAY ============ -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ CUSTOM CURSOR SMASH DOT (decorative) ============ -->
+<div class="smash-cursor" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__logo">
+      <img src="assets/logo-badge.png" alt="SMASH ME" class="nav__logo-mark" width="40" height="40">
+      <span class="nav__logo-text">SMASH<em>ME</em></span>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#over-ons" data-nl="Over ons" data-en="About">Over ons</a>
+      <a href="#menu" data-nl="Menu" data-en="Menu">Menu</a>
+      <a href="#reviews" data-nl="Reviews" data-en="Reviews">Reviews</a>
+      <a href="#openingstijden" data-nl="Openingstijden" data-en="Hours">Openingstijden</a>
+      <a href="#contact" data-nl="Contact" data-en="Contact">Contact</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span class="lang-toggle__opt is-active" data-lang="nl">NL</span>
+        <span class="lang-toggle__sep">/</span>
+        <span class="lang-toggle__opt" data-lang="en">EN</span>
+      </button>
+      <a href="https://www.ubereats.com/store-browse-uuid/3f3a3b86-afae-451e-968b-3712e34dcf00?diningMode=DELIVERY" target="_blank" rel="noopener" class="btn btn--primary btn--small">
+        <span data-nl="Bestel nu" data-en="Order now">Bestel nu</span>
+      </a>
+    </div>
+
+    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#over-ons" data-nl="Over ons" data-en="About">Over ons</a>
+    <a href="#menu" data-nl="Menu" data-en="Menu">Menu</a>
+    <a href="#reviews" data-nl="Reviews" data-en="Reviews">Reviews</a>
+    <a href="#openingstijden" data-nl="Openingstijden" data-en="Hours">Openingstijden</a>
+    <a href="#contact" data-nl="Contact" data-en="Contact">Contact</a>
+    <a href="https://www.ubereats.com/store-browse-uuid/3f3a3b86-afae-451e-968b-3712e34dcf00?diningMode=DELIVERY" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top:1rem;">
+      <span data-nl="Bestel nu" data-en="Order now">Bestel nu</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/hero-bg.jpg" alt="" class="hero__bg-img" loading="eager">
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__logo-wrap" data-reveal>
+        <img src="assets/logo-badge.png" alt="SMASH ME logo" class="hero__logo" width="130" height="130">
+      </div>
+
+      <p class="hero__eyebrow" data-reveal>
+        <span class="dot"></span>
+        <span data-nl="Czarinastraat 9 · Zaandam" data-en="Czarinastraat 9 · Zaandam">Czarinastraat 9 · Zaandam</span>
+      </p>
+
+      <h1 class="hero__title" data-reveal>
+        <span class="line line--1"><span class="word">SMASH</span></span>
+        <span class="line line--2"><span class="word word--outline">ME</span></span>
+      </h1>
+
+      <p class="hero__tagline" data-reveal data-nl="Stack it. Smash it. Love it." data-en="Stack it. Smash it. Love it.">
+        Stack it. Smash it. Love it.
+      </p>
+
+      <div class="hero__cta" data-reveal>
+        <a href="#menu" class="btn btn--primary">
+          <span data-nl="Bekijk het menu" data-en="View the menu">Bekijk het menu</span>
+        </a>
+        <a href="https://www.ubereats.com/store-browse-uuid/3f3a3b86-afae-451e-968b-3712e34dcf00?diningMode=DELIVERY" target="_blank" rel="noopener" class="btn btn--ghost">
+          <span data-nl="Bestel via Uber Eats" data-en="Order on Uber Eats">Bestel via Uber Eats</span>
+        </a>
+      </div>
+
+      <div class="hero__scroll" data-reveal aria-hidden="true">
+        <span data-nl="Scroll" data-en="Scroll">Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </div>
+
+    <div class="hero__marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>100% VERS GESMASHED</span><span>★</span>
+        <span>HALAL OPTIES</span><span>★</span>
+        <span>ELKE DAG VERSE PATTY</span><span>★</span>
+        <span>ZAANDAM</span><span>★</span>
+        <span>100% VERS GESMASHED</span><span>★</span>
+        <span>HALAL OPTIES</span><span>★</span>
+        <span>ELKE DAG VERSE PATTY</span><span>★</span>
+        <span>ZAANDAM</span><span>★</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OVER ONS ============ -->
+  <section class="about" id="over-ons">
+    <div class="container about__grid">
+      <div class="about__media" data-reveal>
+        <div class="patty-illustration">
+          <svg viewBox="0 0 420 420" class="patty-svg">
+            <circle cx="210" cy="210" r="205" class="patty-ring"/>
+            <ellipse cx="210" cy="130" rx="150" ry="34" class="bun-top"/>
+            <path d="M60 150 Q210 190 360 150 L360 175 Q210 215 60 175 Z" class="lettuce"/>
+            <rect x="55" y="178" width="310" height="30" rx="8" class="cheese"/>
+            <ellipse cx="210" cy="225" rx="155" ry="30" class="patty"/>
+            <ellipse cx="210" cy="270" rx="150" ry="28" class="bun-bottom"/>
+            <g class="sesame">
+              <circle cx="150" cy="105" r="4"/><circle cx="185" cy="92" r="4"/>
+              <circle cx="225" cy="90" r="4"/><circle cx="262" cy="100" r="4"/>
+              <circle cx="205" cy="112" r="4"/><circle cx="130" cy="122" r="4"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="about__content">
+        <p class="eyebrow" data-reveal data-nl="Waarom smashen?" data-en="Why smash?">Waarom smashen?</p>
+        <h2 class="section-title" data-reveal
+          data-nl="Eén harde klap. Krokante randjes. Geen compromis."
+          data-en="One hard slam. Crispy edges. No compromise.">
+          Eén harde klap. Krokante randjes. Geen compromis.
+        </h2>
+        <p class="about__text" data-reveal
+          data-nl="Bij SMASH ME draait alles om de klap: verse ballen 100% rundvlees, keihard gesmasht op de plaat zodat elk randje karamelliseert en elke hap knapt. Geen diepvriespatties, geen shortcuts — gewoon eerlijk vakmanschap uit Zaandam, gebouwd rond het beste broodje en de juiste kaas."
+          data-en="At SMASH ME, everything is about the slam: fresh 100% beef balls, smashed hard onto the plate so every edge caramelizes and every bite cracks. No frozen patties, no shortcuts — just honest craft from Zaandam, built around the best bun and the right cheese.">
+          Bij SMASH ME draait alles om de klap: verse ballen 100% rundvlees, keihard gesmasht op de plaat zodat elk randje karamelliseert en elke hap knapt. Geen diepvriespatties, geen shortcuts — gewoon eerlijk vakmanschap uit Zaandam, gebouwd rond het beste broodje en de juiste kaas.
+        </p>
+
+        <ul class="about__tags" data-reveal>
+          <li><span data-nl="100% vers rundvlees" data-en="100% fresh beef">100% vers rundvlees</span></li>
+          <li><span data-nl="Beyond Meat opties" data-en="Beyond Meat options">Beyond Meat opties</span></li>
+          <li><span data-nl="Elke dag geopend" data-en="Open every day">Elke dag geopend</span></li>
+          <li><span data-nl="Gevestigd in Zaandam" data-en="Based in Zaandam">Gevestigd in Zaandam</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MENU ============ -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <p class="eyebrow eyebrow--center" data-reveal data-nl="Het menu" data-en="The menu">Het menu</p>
+      <h2 class="section-title section-title--center" data-reveal data-nl="Gemaakt om gesmashed te worden" data-en="Made to be smashed">Gemaakt om gesmashed te worden</h2>
+
+      <div class="menu-tabs" data-reveal role="tablist">
+        <button class="menu-tab is-active" data-target="mains" data-nl="Hoofdgerechten" data-en="Mains">Hoofdgerechten</button>
+        <button class="menu-tab" data-target="sides" data-nl="Bijgerechten" data-en="Sides">Bijgerechten</button>
+        <button class="menu-tab" data-target="extras" data-nl="Extras" data-en="Extras">Extras</button>
+        <button class="menu-tab" data-target="sweets" data-nl="Snoepjes" data-en="Desserts">Snoepjes</button>
+        <button class="menu-tab" data-target="drinks" data-nl="Drankjes" data-en="Drinks">Drankjes</button>
+      </div>
+
+      <div class="menu-panels">
+
+        <div class="menu-panel is-active" id="panel-mains">
+          <div class="menu-grid" id="mainsGrid"></div>
+        </div>
+
+        <div class="menu-panel" id="panel-sides">
+          <div class="menu-grid menu-grid--compact" id="sidesGrid"></div>
+        </div>
+
+        <div class="menu-panel" id="panel-extras">
+          <div class="extras-wrap" id="extrasWrap"></div>
+        </div>
+
+        <div class="menu-panel" id="panel-sweets">
+          <div class="menu-grid menu-grid--compact" id="sweetsGrid"></div>
+        </div>
+
+        <div class="menu-panel" id="panel-drinks">
+          <div class="drinks-grid" id="drinksGrid"></div>
+        </div>
+
+      </div>
+
+      <p class="menu-note" data-reveal data-nl="Prijzen kunnen wijzigen. Vraag naar allergenen bij het bestellen." data-en="Prices subject to change. Ask about allergens when ordering.">
+        Prijzen kunnen wijzigen. Vraag naar allergenen bij het bestellen.
+      </p>
+
+      <div class="menu-download" data-reveal>
+        <a class="link-pill" href="smashme-menu-nl.pdf" target="_blank" rel="noopener" data-nl="Volledig menu NL (PDF)" data-en="Full menu NL (PDF)">Volledig menu NL (PDF)</a>
+        <a class="link-pill" href="smashme-menu-en.pdf" target="_blank" rel="noopener" data-nl="Full menu EN (PDF)" data-en="Full menu EN (PDF)">Full menu EN (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICE INFO ============ -->
+  <section class="info-strip">
+    <div class="container info-strip__grid">
+      <div class="info-col" data-reveal>
+        <h4 data-nl="Serviceopties" data-en="Service options">Serviceopties</h4>
+        <ul>
+          <li data-nl="Bezorging" data-en="Delivery">Bezorging</li>
+          <li data-nl="Services op bedrijfslocatie" data-en="On-site services">Services op bedrijfslocatie</li>
+          <li data-nl="Afhalen" data-en="Takeaway">Afhalen</li>
+          <li data-nl="Ter plaatse eten" data-en="Dine-in">Ter plaatse eten</li>
+        </ul>
+      </div>
+      <div class="info-col" data-reveal>
+        <h4 data-nl="Aanbod" data-en="What we offer">Aanbod</h4>
+        <ul>
+          <li data-nl="Snelle hap" data-en="Quick bite">Snelle hap</li>
+          <li data-nl="Vegetarische menuopties" data-en="Vegetarian options">Vegetarische menuopties</li>
+        </ul>
+      </div>
+      <div class="info-col" data-reveal>
+        <h4 data-nl="Prijsindicatie" data-en="Price range">Prijsindicatie</h4>
+        <p class="info-price">€ 10–20 <span data-nl="per persoon" data-en="per person">per persoon</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <p class="eyebrow eyebrow--center" data-reveal data-nl="Wat gasten zeggen" data-en="What guests say">Wat gasten zeggen</p>
+      <h2 class="section-title section-title--center" data-reveal data-nl="Onze klap wordt gehoord" data-en="Our slam gets noticed">Onze klap wordt gehoord</h2>
+
+      <div class="reviews__grid" data-reveal>
+
+        <article class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__quote" data-nl="Het eten is erg lekker! Ik heb daar al twee keer gegeten. Vooral de kipburger is geweldig!!! De frietjes met truffel-mayo en Parmezaanse kaas zijn echt fantastisch." data-en="The food is really tasty! I've eaten there twice already. Especially the chicken burger is amazing!!! The fries with truffle mayo and parmesan cheese are truly fantastic.">
+            Het eten is erg lekker! Ik heb daar al twee keer gegeten. Vooral de kipburger is geweldig!!! De frietjes met truffel-mayo en Parmezaanse kaas zijn echt fantastisch. 🤤
+          </p>
+          <div class="review-card__meta">
+            <span class="review-card__name">Futoun Saloum</span>
+            <div class="review-card__ratings">
+              <span><em data-nl="Eten" data-en="Food">Eten</em> 5</span>
+              <span><em data-nl="Service" data-en="Service">Service</em> 5</span>
+              <span><em data-nl="Sfeer" data-en="Atmosphere">Sfeer</em> 5</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__quote" data-nl="Vorige keer hier besteld. Heel schoon, vriendelijke personeel en de smashburgers en friet zijn heerlijk! Ik ga hier vandaag weer met mijn vrouw afhalen omdat het een betrouwbare zaak is!" data-en="Ordered here last time. Very clean, friendly staff, and the smashburgers and fries are delicious! I'm going back today with my wife because it's a reliable place!">
+            Vorige keer hier besteld. Heel schoon, vriendelijke personeel en de smashburgers en friet zijn heerlijk! Ik ga hier vandaag weer met mijn vrouw afhalen omdat het een betrouwbare zaak is!
+          </p>
+          <div class="review-card__meta">
+            <span class="review-card__name">Cle Lud</span>
+            <div class="review-card__ratings">
+              <span><em data-nl="Eten" data-en="Food">Eten</em> 5</span>
+              <span><em data-nl="Service" data-en="Service">Service</em> 5</span>
+              <span><em data-nl="Sfeer" data-en="Atmosphere">Sfeer</em> 5</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__stars">★★★★<span class="is-dim">★</span></div>
+          <p class="review-card__quote" data-nl="Heerlijke burger gegeten! Ik eet vegetarisch en ook dan is er genoeg keus. Bestel ook de friet met truffel en parmezaanse kaas ;)" data-en="Had a delicious burger! I eat vegetarian and even then there's plenty of choice. Also order the truffle & parmesan fries ;)">
+            Heerlijke burger gegeten! Ik eet vegetarisch en ook dan is er genoeg keus. Bestel ook de friet met truffel en parmezaanse kaas ;)
+          </p>
+          <div class="review-card__meta">
+            <span class="review-card__name">mytamalex</span>
+            <div class="review-card__ratings">
+              <span><em data-nl="Eten" data-en="Food">Eten</em> 5</span>
+              <span><em data-nl="Service" data-en="Service">Service</em> 5</span>
+              <span><em data-nl="Sfeer" data-en="Atmosphere">Sfeer</em> 4</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OPENINGSTIJDEN ============ -->
+  <section class="hours" id="openingstijden">
+    <div class="container hours__grid">
+      <div>
+        <p class="eyebrow" data-reveal data-nl="Wanneer kom je?" data-en="When to visit?">Wanneer kom je?</p>
+        <h2 class="section-title" data-reveal data-nl="Openingstijden" data-en="Opening Hours">Openingstijden</h2>
+        <p class="about__text" data-reveal data-nl="Elke dag vers gesmasht, elke avond geopend." data-en="Fresh smashed every day, open every evening.">
+          Elke dag vers gesmasht, elke avond geopend.
+        </p>
+      </div>
+
+      <div class="hours__table" data-reveal>
+        <div class="hours__row"><span data-nl="Maandag" data-en="Monday">Maandag</span><span>17:00 – 21:45</span></div>
+        <div class="hours__row"><span data-nl="Dinsdag" data-en="Tuesday">Dinsdag</span><span>17:00 – 21:45</span></div>
+        <div class="hours__row"><span data-nl="Woensdag" data-en="Wednesday">Woensdag</span><span>17:00 – 21:45</span></div>
+        <div class="hours__row"><span data-nl="Donderdag" data-en="Thursday">Donderdag</span><span>17:00 – 21:45</span></div>
+        <div class="hours__row"><span data-nl="Vrijdag" data-en="Friday">Vrijdag</span><span>17:00 – 21:45</span></div>
+        <div class="hours__row"><span data-nl="Zaterdag" data-en="Saturday">Zaterdag</span><span>17:00 – 21:45</span></div>
+        <div class="hours__row"><span data-nl="Zondag" data-en="Sunday">Zondag</span><span>17:00 – 21:45</span></div>
+        <p class="hours__footnote" data-nl="* Openingstijden kunnen afwijken op feestdagen. Check onze social media voor updates." data-en="* Hours may vary on holidays. Check our social media for updates.">
+          * Openingstijden kunnen afwijken op feestdagen. Check onze social media voor updates.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="container contact__grid">
+      <div class="contact__info">
+        <p class="eyebrow" data-reveal data-nl="Kom langs of bestel" data-en="Visit or order">Kom langs of bestel</p>
+        <h2 class="section-title" data-reveal data-nl="Reach out &amp; smash" data-en="Reach out &amp; smash">Reach out &amp; smash</h2>
+
+        <div class="contact__block" data-reveal>
+          <h3 data-nl="Adres" data-en="Address">Adres</h3>
+          <p>Czarinastraat 9<br>1506 RB Zaandam<br>Nederland</p>
+        </div>
+
+        <div class="contact__block" data-reveal>
+          <h3 data-nl="E-mail" data-en="Email">E-mail</h3>
+          <p><a href="mailto:info@smashmeh.nl">info@smashmeh.nl</a></p>
+        </div>
+
+        <div class="contact__socials" data-reveal>
+          <a href="https://www.instagram.com/smash__me" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="6"/><circle cx="12" cy="12" r="4.2" class="icon-cut"/><circle cx="17.3" cy="6.7" r="1.3" class="icon-cut"/></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="http://www.tiktok.com/@smash__me" target="_blank" rel="noopener" class="social-btn" aria-label="TikTok">
+            <svg viewBox="0 0 24 24"><path d="M16.5 2c.4 2.2 2 3.9 4.2 4.2v3.1c-1.5.1-2.9-.3-4.2-1.1v6.6a6 6 0 1 1-6-6c.3 0 .6 0 .9.1v3.2a2.9 2.9 0 1 0 2.1 2.8V2z"/></svg>
+            <span>TikTok</span>
+          </a>
+          <a href="https://www.ubereats.com/store-browse-uuid/3f3a3b86-afae-451e-968b-3712e34dcf00?diningMode=DELIVERY" target="_blank" rel="noopener" class="social-btn" aria-label="Uber Eats">
+            <svg viewBox="0 0 24 24"><path d="M4 12h16M4 12a8 8 0 0 1 16 0M4 12a8 8 0 0 0 16 0" class="icon-stroke"/></svg>
+            <span>Uber Eats</span>
+          </a>
+          <a href="mailto:info@smashmeh.nl" class="social-btn" aria-label="Email">
+            <svg viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="3" class="icon-stroke"/><path d="M3 6l9 7 9-7" class="icon-stroke"/></svg>
+            <span data-nl="E-mail" data-en="Email">E-mail</span>
+          </a>
+          <a href="https://maps.app.goo.gl/bGhdYPCMyyiWQri87" target="_blank" rel="noopener" class="social-btn" aria-label="Google Maps">
+            <svg viewBox="0 0 24 24"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12z" class="icon-stroke"/><circle cx="12" cy="9" r="2.4" class="icon-stroke"/></svg>
+            <span data-nl="Route" data-en="Directions">Route</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact__map" data-reveal>
+        <iframe
+          title="SMASH ME op Google Maps"
+          src="https://www.google.com/maps?q=Czarinastraat+9,+1506+RB+Zaandam,+Netherlands&output=embed"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="#top" class="nav__logo">
+        <img src="assets/logo-badge.png" alt="SMASH ME" class="nav__logo-mark" width="40" height="40">
+        <span class="nav__logo-text">SMASH<em>ME</em></span>
+      </a>
+      <p data-nl="Stack it. Smash it. Love it." data-en="Stack it. Smash it. Love it.">Stack it. Smash it. Love it.</p>
+    </div>
+
+    <div class="footer__links">
+      <h4 data-nl="Ontdek" data-en="Explore">Ontdek</h4>
+      <a href="#over-ons" data-nl="Over ons" data-en="About">Over ons</a>
+      <a href="#menu" data-nl="Menu" data-en="Menu">Menu</a>
+      <a href="#reviews" data-nl="Reviews" data-en="Reviews">Reviews</a>
+      <a href="#openingstijden" data-nl="Openingstijden" data-en="Hours">Openingstijden</a>
+    </div>
+
+    <div class="footer__links">
+      <h4 data-nl="Contact" data-en="Contact">Contact</h4>
+      <a href="mailto:info@smashmeh.nl">info@smashmeh.nl</a>
+      <a href="https://maps.app.goo.gl/bGhdYPCMyyiWQri87" target="_blank" rel="noopener">Czarinastraat 9, Zaandam</a>
+    </div>
+
+    <div class="footer__links">
+      <h4 data-nl="Volg ons" data-en="Follow us">Volg ons</h4>
+      <a href="https://www.instagram.com/smash__me" target="_blank" rel="noopener">Instagram</a>
+      <a href="http://www.tiktok.com/@smash__me" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.ubereats.com/store-browse-uuid/3f3a3b86-afae-451e-968b-3712e34dcf00?diningMode=DELIVERY" target="_blank" rel="noopener">Uber Eats</a>
+    </div>
+  </div>
+
+  <div class="footer__bottom container">
+    <span>&copy; <span id="year"></span> SMASH ME — Zaandam</span>
+    <span data-nl="Gemaakt met trots &amp; een smashplaat." data-en="Made with pride &amp; a smash plate.">Gemaakt met trots &amp; een smashplaat.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
